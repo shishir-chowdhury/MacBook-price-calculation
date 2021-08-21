@@ -100,6 +100,8 @@ document.getElementById('apply-button').addEventListener('click', function () {
         let promoTotal = totalCost * 0.8;
         document.getElementById('grand-total').innerText = promoTotal;
     }
+    /* Clear the input field */
+    document.getElementById('promo-input').value = '';
 })
 
 

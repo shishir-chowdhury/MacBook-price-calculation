@@ -8,6 +8,7 @@ function extraMemoryCost(cost, isMemory) {
     }
     return memoryCost.innerText;
 }
+
 /* Extra Storage Cost */
 function extraStorageCost(cost, isStorage) {
     const storageCost = document.getElementById(cost);
@@ -21,6 +22,7 @@ function extraStorageCost(cost, isStorage) {
     return storageCost.innerText;
 
 }
+
 /* Delivery Cost */
 function extraDeliveryCost(charge, isDelivery) {
     const deliveryCost = document.getElementById(charge);
@@ -31,6 +33,7 @@ function extraDeliveryCost(charge, isDelivery) {
     }
     return deliveryCost.innerText;
 }
+
 /* Total Cost count */
 function totalCostCount() {
     let total = 0;
@@ -42,28 +45,31 @@ function totalCostCount() {
     total = bestPrice + memoryCost + storageCost + deleviryCost;
     document.getElementById('total-cost').innerText = total;
 }
+
 /* Button click first delivery */
 document.getElementById('delivery-cost1').addEventListener('click', function () {
     const deliveryCost1 = parseInt(extraDeliveryCost('delivery-charge', true));
     totalCostCount();
 })
+
 /* Button click second delivery */
 document.getElementById('delivery-cost2').addEventListener('click', function () {
     const deliveryCost2 = parseInt(extraDeliveryCost('delivery-charge', false));
     totalCostCount();
 })
 
-
 /* Button click first storage */
 document.getElementById('storage1').addEventListener('click', function () {
     const storageCost1 = parseInt(extraStorageCost('storage-cost', 1));
     totalCostCount();
 })
+
 /* Button click second storage */
 document.getElementById('storage2').addEventListener('click', function () {
     const storageCost2 = parseInt(extraStorageCost('storage-cost', 2));
     totalCostCount();
 })
+
 /* Button click third storage  */
 document.getElementById('storage3').addEventListener('click', function () {
     const storageCost3 = parseInt(extraStorageCost('storage-cost', 3));
@@ -77,12 +83,26 @@ document.getElementById('first-memory').addEventListener('click', function () {
     totalCostCount();
 
 })
+
 /* Button click second memory */
 document.getElementById('second-memory').addEventListener('click', function () {
 
     const memoryCost2 = parseInt(extraMemoryCost('memory-cost', false));
     totalCostCount();
 })
+
+/* Promo Code Apply */
+document.getElementById('apply-button').addEventListener('click', function () {
+    const promoInput = document.getElementById('promo-input').value;
+    if (promoInput == 'steve') {
+        let totalCost = parseInt(document.getElementById('total-cost').innerText);
+        let promoTotal = totalCost * 0.8;
+        document.getElementById('grand-total').innerText = promoTotal;
+
+
+    }
+})
+
 
 
 

@@ -44,6 +44,7 @@ function totalCostCount() {
     let deleviryCost = parseInt(document.getElementById('delivery-charge').innerText);
     total = bestPrice + memoryCost + storageCost + deleviryCost;
     document.getElementById('total-cost').innerText = total;
+    document.getElementById('grand-total').innerText = total;
 }
 
 /* Button click first delivery */
@@ -94,7 +95,7 @@ document.getElementById('second-memory').addEventListener('click', function () {
 /* Promo Code Apply */
 document.getElementById('apply-button').addEventListener('click', function () {
     const promoInput = document.getElementById('promo-input').value;
-    if (promoInput == 'steve') {
+    if (promoInput == 'stevekaku') {
         let totalCost = parseInt(document.getElementById('total-cost').innerText);
         let promoTotal = totalCost * 0.8;
         document.getElementById('grand-total').innerText = promoTotal;

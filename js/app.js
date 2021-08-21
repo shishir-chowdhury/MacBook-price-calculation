@@ -71,7 +71,7 @@ document.getElementById('storage2').addEventListener('click', function () {
     totalCostCount();
 })
 
-/* Button click third storage  */
+/* Button click third storage */
 document.getElementById('storage3').addEventListener('click', function () {
     const storageCost3 = parseInt(extraStorageCost('storage-cost', 3));
     totalCostCount();
@@ -99,8 +99,6 @@ document.getElementById('apply-button').addEventListener('click', function () {
         let totalCost = parseInt(document.getElementById('total-cost').innerText);
         let promoTotal = totalCost * 0.8;
         document.getElementById('grand-total').innerText = promoTotal;
-
-
     }
 })
 

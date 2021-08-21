@@ -1,3 +1,7 @@
 td{
     border-bottom: 1px solid gray;
 }
+table tr td{
+    font-weight: 700;
+    line-height: 300%;
+}
